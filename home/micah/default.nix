@@ -11,7 +11,7 @@
   home.stateVersion = "24.05";
 
   home.shellAliases = {
-    "update" = "sudo nixos-rebuild switch";
+    "nixup" = "sudo nixos-rebuild switch";
   };
 
   programs.home-manager.enable = true;

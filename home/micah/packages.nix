@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     bitwarden-desktop
-    nil
+    nixd
     nixpkgs-fmt
     ungoogled-chromium
     vscode

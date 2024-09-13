@@ -39,6 +39,11 @@ in
     pkgs.ungoogled-chromium
     pkgs.vscode
 
+    # zsh
+    # pkgs.zshmarks
+    # pkgs.zsh-vi-mode
+    pkgs.zsh-powerlevel10k
+
     # unstable
     upkgs.bun
     upkgs.firefox

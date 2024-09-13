@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    discord
     bitwarden-desktop
     nixd
     nixpkgs-fmt

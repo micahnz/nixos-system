@@ -11,14 +11,16 @@
   };
 
   outputs = { self, nixpkgs, nixos-hardware, ... } @ inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./nixos
-        ./nixos/home-manager.nix
-        nixos-hardware.nixosModules.thinkpad-e16
-      ];
+    nixosModules = {
+      nixosSystem = { hardware ? "thinkpad-e16" }: nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos
+          ./nixos/home-manager.nix
+          nixos-hardware.nixosModules.${hardware}
+        ];
+      };
     };
   };
 }

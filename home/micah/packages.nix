@@ -1,12 +1,46 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
+let
+  # unstable packages channel
+  upkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
 
+  # google cloud with auth plugin
+  gcloud = pkgs.google-cloud-sdk.withExtraComponents [
+    pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+  ];
+in
 {
-  home.packages = with pkgs; [
-    discord
-    bitwarden-desktop
-    nixd
-    nixpkgs-fmt
-    ungoogled-chromium
-    vscode
+  home.packages = [
+    # custom
+    gcloud
+
+    # stable
+    pkgs.argocd
+    pkgs.awscli2
+    pkgs.azure-cli
+    pkgs.bitwarden-desktop
+    pkgs.buildah
+    pkgs.delve
+    pkgs.discord
+    pkgs.doctl
+    pkgs.fzf
+    pkgs.gh
+    pkgs.go
+    pkgs.jq
+    pkgs.k9s
+    pkgs.kubectl
+    pkgs.kubectx
+    pkgs.kubernetes-helm
+    pkgs.nixd
+    pkgs.nixpkgs-fmt
+    pkgs.screen
+    pkgs.slack
+    pkgs.talosctl
+    pkgs.terraform
+    pkgs.ungoogled-chromium
+    pkgs.vscode
+
+    # unstable
+    upkgs.bun
+    upkgs.firefox
   ];
 }

@@ -17,6 +17,7 @@ in
     pkgs.argocd
     pkgs.awscli2
     pkgs.azure-cli
+    pkgs.biome
     pkgs.bitwarden-desktop
     pkgs.buildah
     pkgs.delve
@@ -30,7 +31,6 @@ in
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
-    pkgs.nixd
     pkgs.nixpkgs-fmt
     pkgs.screen
     pkgs.slack
@@ -47,5 +47,6 @@ in
     # unstable/latest
     upkgs.bun
     upkgs.firefox
+    upkgs.nixd
   ];
 }

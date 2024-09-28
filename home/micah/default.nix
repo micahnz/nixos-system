@@ -8,9 +8,12 @@
     ./settings.nix
   ];
 
-  home.username = "micah";
-  home.homeDirectory = "/home/micah";
-  home.stateVersion = "24.05";
+  home = {
+    username = "micah";
+    homeDirectory = "/home/micah";
+    stateVersion = "24.05";
+    enableNixpkgsReleaseCheck = false;
+  };
 
   home.shellAliases = {
     "k" = "kubectl";

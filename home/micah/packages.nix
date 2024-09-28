@@ -1,8 +1,5 @@
 { config, pkgs, inputs, ... }:
 let
-  # unstable packages channel
-  upkgs = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system};
-
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
     pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
@@ -13,16 +10,18 @@ in
     # custom
     gcloud
 
-    # stable
+    #
     pkgs.argocd
     pkgs.awscli2
     pkgs.azure-cli
     pkgs.biome
     pkgs.bitwarden-desktop
     pkgs.buildah
+    pkgs.bun
     pkgs.delve
     pkgs.discord
     pkgs.doctl
+    pkgs.firefox
     pkgs.fzf
     pkgs.gh
     pkgs.go
@@ -31,6 +30,7 @@ in
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
+    pkgs.nixd
     pkgs.nixpkgs-fmt
     pkgs.screen
     pkgs.slack
@@ -39,15 +39,6 @@ in
     pkgs.terraform
     pkgs.ungoogled-chromium
     pkgs.vscode
-
-    # zsh
-    # pkgs.zshmarks
-    # pkgs.zsh-vi-mode
     pkgs.zsh-powerlevel10k
-
-    # unstable/latest
-    upkgs.bun
-    upkgs.firefox
-    upkgs.nixd
   ];
 }

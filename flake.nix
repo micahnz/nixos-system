@@ -17,7 +17,7 @@
     in
     {
       nixosModules = {
-        nixosSystem = { hardware ? "thinkpad-e16" }: nixpkgs.lib.nixosSystem {
+        nixosSystem = { hardware ? "default" }: nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [

@@ -1,16 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./aliases.nix
-    ./packages.nix
-    ./settings.nix
-  ];
-
-  home.username = "micah";
-  home.homeDirectory = "/home/micah";
-  home.stateVersion = "24.05";
-
   home.shellAliases = {
     "k" = "kubectl";
     "kcns" = "kubens";
@@ -20,6 +10,4 @@
     "nixup" = "sudo nixos-rebuild switch --recreate-lock-file --flake /home/micah";
     "tf" = "terraform";
   };
-
-  programs.home-manager.enable = true;
 }

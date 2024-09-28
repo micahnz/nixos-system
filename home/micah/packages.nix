@@ -44,7 +44,7 @@ in
     # pkgs.zsh-vi-mode
     pkgs.zsh-powerlevel10k
 
-    # unstable
+    # unstable/latest
     upkgs.bun
     upkgs.firefox
   ];

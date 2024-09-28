@@ -4,6 +4,7 @@
   imports = [
     ./aliases.nix
     ./packages.nix
+    ./services.nix
     ./settings.nix
   ];
 

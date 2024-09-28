@@ -34,6 +34,7 @@ in
     pkgs.nixpkgs-fmt
     pkgs.screen
     pkgs.slack
+    pkgs.syncthingtray
     pkgs.talosctl
     pkgs.terraform
     pkgs.ungoogled-chromium

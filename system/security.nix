@@ -3,6 +3,7 @@
 {
   security.rtkit.enable = true;
 
+  # sudo without password
   security.sudo.extraRules = [
     {
       users = [ "micah" ];

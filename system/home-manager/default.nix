@@ -11,6 +11,6 @@ in
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.micah = import ../home/micah;
+    users.micah = import ../../home/micah;
   };
 }

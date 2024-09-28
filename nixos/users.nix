@@ -4,6 +4,10 @@
     isNormalUser = true;
     description = "micah";
     shell = pkgs.zsh;
-    extraGroups = [ "docker" "networkmanager" "wheel" ];
+    extraGroups = [
+      "docker"
+      "networkmanager"
+      "wheel"
+    ];
   };
 }

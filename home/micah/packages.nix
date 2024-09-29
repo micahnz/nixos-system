@@ -32,6 +32,7 @@ in
     pkgs.kubernetes-helm
     pkgs.nixd
     pkgs.nixpkgs-fmt
+    pkgs.prismlauncher
     pkgs.screen
     pkgs.slack
     pkgs.syncthingtray

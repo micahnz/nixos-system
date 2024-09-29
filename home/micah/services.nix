@@ -12,7 +12,7 @@
   # syncthing tray
   services.syncthing.tray = {
     enable = true;
-    command = "syncthingtray";
+    command = "syncthingtray --wait";
     package = pkgs.syncthingtray;
   };
 }

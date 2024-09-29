@@ -48,7 +48,5 @@ in
     pkgs.vscode
     pkgs.zsh-powerlevel10k
     pkgs.wl-clipboard
-
-
   ];
 }

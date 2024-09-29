@@ -2,11 +2,13 @@
 
 {
   # zsh
-  programs.zsh.enable = true;
-  programs.zsh.autosuggestion.enable = true;
-  programs.zsh.syntaxHighlighting.enable = true;
-  programs.zsh.oh-my-zsh.enable = true;
-  programs.zsh.oh-my-zsh.theme = "robbyrussell";
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    oh-my-zsh.enable = true;
+    oh-my-zsh.theme = "robbyrussell";
+  };
 
   programs.zsh.initExtraFirst = ''
     source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme

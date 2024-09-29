@@ -5,9 +5,11 @@
   services.xserver.enable = true;
 
   # kde plasma 6
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  services.displayManager = {
+    sddm.enable = true;
+    sddm.wayland.enable = true;
+    plasma6.enable = true;
+  };
 
   # keyboard loayout for x11
   services.xserver.xkb = {

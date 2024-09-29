@@ -7,6 +7,7 @@ in
     home-manager.nixosModules.home-manager
   ];
 
+  # home-manager settings
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;

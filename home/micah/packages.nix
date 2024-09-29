@@ -44,6 +44,7 @@ in
     pkgs.syncthingtray
     pkgs.talosctl
     pkgs.terraform
+    pkgs.jan
     pkgs.ungoogled-chromium
     pkgs.vscode
     pkgs.zsh-powerlevel10k

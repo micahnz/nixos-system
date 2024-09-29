@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./services/syncthing.nix
+  ];
+
   # requried for sddm
   services.xserver.enable = true;
 

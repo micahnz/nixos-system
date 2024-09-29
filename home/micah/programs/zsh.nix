@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, userpkgs, ... }:
 
 {
   # zsh
@@ -24,18 +24,23 @@
     source $HOME/.zshrc-extra
   '';
 
+  programs.zsh.plugins = [
+    {
+      name = "vi-mode";
+      src = pkgs.zsh-vi-mode;
+      file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+    }
+    {
+      name = "zshmarks";
+      src = userpkgs.zshmarks;
+      file = "share/zshmarks/zshmarks.plugin.zsh";
+    }
+  ];
+
   programs.zsh.oh-my-zsh.plugins = [
     "colorize"
     "docker"
     "git"
     "kubectl"
   ];
-
-  # git
-  programs.git = {
-    enable = true;
-    userName = "Micah Mitchell";
-    userEmail = "micah@topvine.co";
-    extraConfig.init.defaultBranch = "main";
-  };
 }

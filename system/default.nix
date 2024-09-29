@@ -14,7 +14,6 @@
     ./packages.nix
     ./security.nix
     ./services.nix
-    ./services/syncthing.nix
     ./users.nix
   ];
 }

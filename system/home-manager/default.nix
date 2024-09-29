@@ -10,7 +10,7 @@ in
   # home-manager settings
   home-manager = {
     extraSpecialArgs = {
-      inputs = inputs;
+      userpkgs = config.userpkgs;
       nur = config.nur;
     };
     useGlobalPkgs = true;

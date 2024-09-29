@@ -5,7 +5,7 @@
     ./aliases.nix
     ./packages.nix
     ./services.nix
-    ./settings.nix
+    ./programs.nix
   ];
 
   home = {

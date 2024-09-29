@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, nur, ... }:
+{ config, pkgs, nur, ... }:
 let
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [

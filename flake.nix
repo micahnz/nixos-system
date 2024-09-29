@@ -27,6 +27,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
+            ./userpkgs
             ./system
             ./system/home-manager
             nixos-hardware.${hardware}

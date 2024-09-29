@@ -2,16 +2,22 @@
   description = "System flake";
 
   inputs = {
+    # package repos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # nixos-hardware.url = "path:///home/micah/.flakes/nixos-hardware";
-    nixos-hardware.url = "github:micahnz/nixos-hardware";
+    nur.url = "github:nix-community/NUR";
+
+    # home-manager
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # hardware profiles
+    # nixos-hardware.url = "path:///home/micah/.flakes/nixos-hardware";
+    nixos-hardware.url = "github:micahnz/nixos-hardware";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
+  outputs = { self, nixpkgs, nur, ... } @ inputs:
     let
       nixos-hardware = inputs.nixos-hardware.nixosModules;
     in
@@ -24,6 +30,7 @@
             ./system
             ./system/home-manager
             nixos-hardware.${hardware}
+            nur.nixosModules.nur
           ];
         };
       };

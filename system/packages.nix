@@ -1,16 +1,16 @@
 { config, pkgs, ... }:
 
 {
-  environment.shells = with pkgs; [
-    bash
-    zsh
+  environment.shells = [
+    pkgs.bash
+    pkgs.zsh
   ];
 
-  environment.systemPackages = with pkgs; [
-    curl
-    git
-    wget
-    vim
+  environment.systemPackages = [
+    pkgs.curl
+    pkgs.git
+    pkgs.wget
+    pkgs.vim
   ];
 
   programs.zsh.enable = true;

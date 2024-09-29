@@ -9,7 +9,10 @@ in
 
   # home-manager settings
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inputs = inputs;
+      nur = config.nur;
+    };
     useGlobalPkgs = true;
     useUserPackages = true;
     users.micah = import ../../home/micah;

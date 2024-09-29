@@ -1,14 +1,20 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, nur, ... }:
 let
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
     pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
   ];
+
+  # https://github.com/AtaraxiaSjel/nur/tree/master/pkgs/waydroid-script
+  waydroid-script = pkgs.writeShellScriptBin "waydroid-script" ''
+    exec ${nur.repos.ataraxiasjel.waydroid-script}/bin/waydroid-script
+  '';
 in
 {
   home.packages = [
     # custom
     gcloud
+    waydroid-script
 
     #
     pkgs.argocd
@@ -41,5 +47,8 @@ in
     pkgs.ungoogled-chromium
     pkgs.vscode
     pkgs.zsh-powerlevel10k
+    pkgs.wl-clipboard
+
+
   ];
 }

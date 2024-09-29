@@ -13,7 +13,7 @@
 
   outputs = { self, nixpkgs, ... } @ inputs:
     let
-      nixos-hardware = inputs.nixos-hardware;
+      nixos-hardware = inputs.nixos-hardware.nixosModules;
     in
     {
       nixosModules = {
@@ -23,7 +23,7 @@
           modules = [
             ./system
             ./system/home-manager
-            nixos-hardware.nixosModules.${hardware}
+            nixos-hardware.${hardware}
           ];
         };
       };

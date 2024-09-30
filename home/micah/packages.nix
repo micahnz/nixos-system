@@ -38,6 +38,7 @@ in
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
+    pkgs.nodejs_20
     pkgs.nixd
     pkgs.nixpkgs-fmt
     pkgs.prismlauncher

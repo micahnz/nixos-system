@@ -24,6 +24,7 @@ in
     pkgs.bitwarden-desktop
     pkgs.buildah
     pkgs.bun
+    pkgs.cpu-x
     pkgs.delve
     pkgs.discord
     pkgs.doctl
@@ -32,6 +33,7 @@ in
     pkgs.gh
     pkgs.go
     pkgs.jq
+    pkgs.go-jsonnet
     pkgs.k9s
     pkgs.kubectl
     pkgs.kubectx

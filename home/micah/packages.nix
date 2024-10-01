@@ -32,25 +32,26 @@ in
     pkgs.fzf
     pkgs.gh
     pkgs.go
-    pkgs.jq
     pkgs.go-jsonnet
+    pkgs.jan
+    pkgs.jq
     pkgs.k9s
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
-    pkgs.nodejs_20
     pkgs.nixd
     pkgs.nixpkgs-fmt
+    pkgs.nodejs_20
+    pkgs.obsidian
     pkgs.prismlauncher
     pkgs.screen
     pkgs.slack
     pkgs.syncthingtray
     pkgs.talosctl
     pkgs.terraform
-    pkgs.jan
     pkgs.ungoogled-chromium
     pkgs.vscode
-    pkgs.zsh-powerlevel10k
     pkgs.wl-clipboard
+    pkgs.zsh-powerlevel10k
   ];
 }

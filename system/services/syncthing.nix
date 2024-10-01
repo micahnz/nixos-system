@@ -24,6 +24,10 @@
       path = "/home/micah/Documents";
       devices = [ "um780" ];
     };
+    "Obsidian" = {
+      path = "/home/micah/Obsidian";
+      devices = [ "um780" ];
+    };
     "Home" = {
       path = "/home/micah/";
       devices = [ "um780" ];

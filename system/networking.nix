@@ -13,5 +13,8 @@
 
       "filmmakermagazine.tpv.k8s"
     ];
+    "172.19.0.2" = [
+      "dash.tradeify.tpv.k8s"
+    ];
   };
 }

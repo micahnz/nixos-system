@@ -39,8 +39,10 @@ in
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
+    pkgs.nickel
     pkgs.nixd
     pkgs.nixpkgs-fmt
+    pkgs.nls
     pkgs.nodejs_20
     pkgs.obsidian
     pkgs.prismlauncher
@@ -49,6 +51,7 @@ in
     pkgs.syncthingtray
     pkgs.talosctl
     pkgs.terraform
+    pkgs.topiary
     pkgs.ungoogled-chromium
     pkgs.vscode
     pkgs.wl-clipboard

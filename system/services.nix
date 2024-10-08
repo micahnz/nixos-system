@@ -13,6 +13,9 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # input remapper
+  services.input-remapper.enable = true;
+
   # keyboard loayout for x11
   services.xserver.xkb = {
     layout = "us";

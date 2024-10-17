@@ -1,4 +1,4 @@
-{ config, pkgs, nur, ... }:
+{ config, pkgs, pkgs-24_05, nur, ... }:
 let
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
@@ -16,12 +16,13 @@ in
     gcloud
     waydroid-script
 
-    #
+    # nixos-24.05
+    pkgs-24_05.azure-cli
+
+    # unstable
     pkgs.argocd
     pkgs.awscli2
-    pkgs.azure-cli
     pkgs.biome
-    pkgs.bitwarden-desktop
     pkgs.buildah
     pkgs.bun
     pkgs.cpu-x

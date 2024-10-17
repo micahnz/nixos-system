@@ -4,6 +4,7 @@
   inputs = {
     # package repos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-24_05.url = "github:NixOS/nixpkgs/nixos-24.05";
     nur.url = "github:nix-community/NUR";
 
     # home-manager

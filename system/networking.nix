@@ -19,6 +19,7 @@
       "frontend.tradeify.tpv.k8s"
       "admin.tradeify.tpv.k8s"
       "storybook.tradeify.tpv.k8s"
+      "rmq.tradeify.tpv.k8s"
     ];
   };
 }

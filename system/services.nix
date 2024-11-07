@@ -16,6 +16,9 @@
   # input remapper
   services.input-remapper.enable = true;
 
+  # tailscale
+  services.tailscale.enable = true;
+
   # keyboard loayout for x11
   services.xserver.xkb = {
     layout = "us";

@@ -17,7 +17,15 @@
   services.input-remapper.enable = true;
 
   # tailscale
-  services.tailscale.enable = true;
+  # services.tailscale.enable = true;
+
+  # zero tier
+  services.zerotierone = {
+    enable = true;
+    networks = [
+      "af415e486f306da7"
+    ];
+  };
 
   # keyboard loayout for x11
   services.xserver.xkb = {

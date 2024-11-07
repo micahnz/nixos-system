@@ -22,7 +22,7 @@
   # zero tier
   services.zerotierone = {
     enable = true;
-    networks = [
+    joinNetworks = [
       "af415e486f306da7"
     ];
   };

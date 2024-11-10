@@ -37,6 +37,7 @@ in
     pkgs.jan
     pkgs.jq
     pkgs.k9s
+    pkgs.k3d
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm

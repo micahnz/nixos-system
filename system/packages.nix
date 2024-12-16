@@ -14,6 +14,7 @@
   ];
 
   programs.zsh.enable = true;
+  programs.java.enable = true;
   programs.nix-ld.enable = true;
   programs.partition-manager.enable = true;
 }

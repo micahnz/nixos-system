@@ -13,7 +13,7 @@ in
     extraSpecialArgs = {
       pkgs-24_05 = pkgs-24_05;
       userpkgs = config.userpkgs;
-      nur = config.nur;
+      # nur = config.nur;
     };
     useGlobalPkgs = true;
     useUserPackages = true;

@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-24_05, nur, ... }:
+{ config, pkgs, pkgs-24_05, ... }:
 let
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
@@ -6,22 +6,23 @@ let
   ];
 
   # https://github.com/AtaraxiaSjel/nur/tree/master/pkgs/waydroid-script
-  waydroid-script = pkgs.writeShellScriptBin "waydroid-script" ''
-    exec ${nur.repos.ataraxiasjel.waydroid-script}/bin/waydroid-script
-  '';
+  # waydroid-script = pkgs.writeShellScriptBin "waydroid-script" ''
+  #   exec ${nur.repos.ataraxiasjel.waydroid-script}/bin/waydroid-script
+  # '';
 in
 {
   home.packages = [
     # custom
     gcloud
-    waydroid-script
+    # waydroid-script
 
     # nixos-24.05
-    pkgs-24_05.azure-cli
 
     # unstable
     pkgs.argocd
     pkgs.awscli2
+    pkgs.azure-cli
+    pkgs.dbeaver-bin
     pkgs.biome
     pkgs.buildah
     pkgs.bun
@@ -41,12 +42,14 @@ in
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
+    pkgs.libreoffice
     pkgs.nickel
     pkgs.nixd
     pkgs.nixpkgs-fmt
     pkgs.nls
     pkgs.nodejs_20
     pkgs.obsidian
+    pkgs.openssl
     pkgs.prismlauncher
     pkgs.screen
     pkgs.slack

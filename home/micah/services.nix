@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, nixosConfig, lib, pkgs, ... }:
 
 {
   # fix for syncthing tray service
@@ -14,5 +14,10 @@
     enable = true;
     command = "syncthingtray --wait";
     package = pkgs.syncthingtray;
+  };
+
+  # autostart input remapper
+  xdg.configFile."autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
+    source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
   };
 }

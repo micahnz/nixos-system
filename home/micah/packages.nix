@@ -22,14 +22,16 @@ in
     pkgs.argocd
     pkgs.awscli2
     pkgs.azure-cli
-    pkgs.dbeaver-bin
     pkgs.biome
     pkgs.buildah
     pkgs.bun
     pkgs.cpu-x
+    pkgs.google-chrome
+    pkgs.dbeaver-bin
     pkgs.delve
     pkgs.discord
     pkgs.doctl
+    pkgs.eksctl
     pkgs.firefox
     pkgs.fzf
     pkgs.gh
@@ -37,8 +39,8 @@ in
     pkgs.go-jsonnet
     pkgs.jan
     pkgs.jq
-    pkgs.k9s
     pkgs.k3d
+    pkgs.k9s
     pkgs.kubectl
     pkgs.kubectx
     pkgs.kubernetes-helm
@@ -52,6 +54,7 @@ in
     pkgs.openssl
     pkgs.prismlauncher
     pkgs.screen
+    pkgs.signal-desktop
     pkgs.slack
     pkgs.syncthingtray
     pkgs.talosctl

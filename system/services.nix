@@ -62,4 +62,12 @@
 
   # waydroid
   virtualisation.waydroid.enable = true;
+
+  # code-server
+  services.code-server = {
+    enable = true;
+    port = 8080;
+    user = "micah";
+    group = "users";
+  };
 }

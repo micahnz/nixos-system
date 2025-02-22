@@ -21,11 +21,12 @@ in
     # unstable
     pkgs.argocd
     pkgs.awscli2
-    pkgs.azure-cli
+    pkgs-24_05.azure-cli
     pkgs.biome
     pkgs.buildah
     pkgs.bun
     pkgs.cpu-x
+    pkgs.code-server
     pkgs.google-chrome
     pkgs.dbeaver-bin
     pkgs.delve
@@ -53,6 +54,7 @@ in
     pkgs.obsidian
     pkgs.openssl
     pkgs.prismlauncher
+    pkgs.s3cmd
     pkgs.screen
     pkgs.signal-desktop
     pkgs.slack

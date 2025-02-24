@@ -22,8 +22,8 @@
   outputs = { self, nixpkgs, hardware-configuration, ... } @ inputs:
     let
       profiles = {
-        qemu = ./hardware/qemu;
-        em780 = ./hardware/em780;
+        qemu = ./profiles/qemu;
+        em780 = ./profiles/em780;
         default = import hardware-configuration;
       };
     in

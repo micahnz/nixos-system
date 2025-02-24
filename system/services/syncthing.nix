@@ -21,13 +21,25 @@
 
   # syncthing folders
   services.syncthing.settings.folders = {
+    ".zsh_history" = {
+      path = "/home/micah/.zsh_history";
+      devices = [ "em780" "r5950x" ];
+    };
     "Documents" = {
       path = "/home/micah/Documents";
-      devices = [ "em780" ];
+      devices = [ "em780" "r5950x" ];
+    };
+    "Pictures" = {
+      path = "/home/micah/Documents";
+      devices = [ "em780" "r5950x" ];
+    };
+    "Sync" = {
+      path = "/home/micah/Documents";
+      devices = [ "em780" "r5950x" ];
     };
     "Obsidian" = {
       path = "/home/micah/Obsidian";
-      devices = [ "em780" ];
+      devices = [ "em780" "r5950x" ];
     };
   };
 }

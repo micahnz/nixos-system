@@ -26,7 +26,7 @@
       devices = [ "em780" "r5950x" ];
     };
     "Pictures" = {
-      path = "/home/micah/Documents";
+      path = "/home/micah/Pictures";
       devices = [ "em780" "r5950x" ];
     };
     "Sync" = {

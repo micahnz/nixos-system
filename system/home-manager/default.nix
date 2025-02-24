@@ -14,7 +14,6 @@ in
       pkgs-24_05 = pkgs-24_05;
       userpkgs = config.userpkgs;
       nixosConfig = config;
-      # nur = config.nur;
     };
     useGlobalPkgs = true;
     useUserPackages = true;

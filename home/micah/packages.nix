@@ -14,15 +14,12 @@ in
   home.packages = [
     # custom
     gcloud
+    
     # waydroid-script
-
-    # nixos-24.05
-
-    # unstable
     pkgs.argocd
     pkgs.awscli2
     pkgs-24_05.azure-cli
-    pkgs.biome
+    pkgs-24_05.biome
     pkgs.buildah
     pkgs.bun
     pkgs.cpu-x

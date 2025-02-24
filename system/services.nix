@@ -5,7 +5,7 @@
     ./services/syncthing.nix
   ];
 
-  # requried for sddm
+  # required for sddm
   services.xserver.enable = true;
 
   # kde plasma 6
@@ -16,9 +16,6 @@
   # input remapper
   services.input-remapper.enable = true;
 
-  # tailscale
-  # services.tailscale.enable = true;
-
   # zero tier
   services.zerotierone = {
     enable = true;
@@ -27,7 +24,7 @@
     ];
   };
 
-  # keyboard loayout for x11
+  # keyboard layout for x11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -53,6 +50,9 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+    # pulse audio
+  services.pulseaudio.enable = false;
 
   # printing
   services.printing.enable = true;

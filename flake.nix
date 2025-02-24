@@ -5,7 +5,6 @@
     # package repos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-24_05.url = "github:NixOS/nixpkgs/nixos-24.05";
-    # nur.url = "github:nix-community/NUR";
 
     # home-manager
     home-manager = {
@@ -13,26 +12,31 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hardware profiles
-    # nixos-hardware.url = "path:///home/micah/.flakes/nixos-hardware";
-    nixos-hardware.url = "github:micahnz/nixos-hardware";
+    # default system generated hardware config
+    hardware-configuration = {
+      url = "path:///etc/nixos/hardware-configuration.nix";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, nur, ... } @ inputs:
+  outputs = { self, nixpkgs, hardware-configuration, ... } @ inputs:
     let
-      nixos-hardware = inputs.nixos-hardware.nixosModules;
+      profiles = {
+        qemu = ./hardware/qemu;
+        em780 = ./hardware/em780;
+        default = import hardware-configuration;
+      };
     in
     {
       nixosModules = {
-        nixosSystem = { hardware ? "default" }: nixpkgs.lib.nixosSystem {
+        nixosSystem = { profile ? "default" }: nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
             ./userpkgs
             ./system
             ./system/home-manager
-            nixos-hardware.${hardware}
-            # nur.nixosModules.nur
+            profiles.${profile}
           ];
         };
       };

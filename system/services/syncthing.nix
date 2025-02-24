@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  # enable synthing
+  # enable syncthing
   services.syncthing = {
     enable = true;
     dataDir = "/home/micah";
@@ -15,22 +15,22 @@
 
   # syncthing devices
   services.syncthing.settings.devices = {
-    "um780" = { id = "A7YQZLC-LWZT52Q-OQPGFYL-VIBIDNF-CBBWMS6-EQ7N65B-SEWANOW-S3HSYAA"; };
+    "em780" = { id = "A7YQZLC-LWZT52Q-OQPGFYL-VIBIDNF-CBBWMS6-EQ7N65B-SEWANOW-S3HSYAA"; };
   };
 
   # syncthing folders
   services.syncthing.settings.folders = {
     "Documents" = {
       path = "/home/micah/Documents";
-      devices = [ "um780" ];
+      devices = [ "em780" ];
     };
     "Obsidian" = {
       path = "/home/micah/Obsidian";
-      devices = [ "um780" ];
+      devices = [ "em780" ];
     };
     "Home" = {
       path = "/home/micah/";
-      devices = [ "um780" ];
+      devices = [ "em780" ];
     };
   };
 }

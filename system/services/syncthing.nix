@@ -16,6 +16,7 @@
   # syncthing devices
   services.syncthing.settings.devices = {
     "em780" = { id = "A7YQZLC-LWZT52Q-OQPGFYL-VIBIDNF-CBBWMS6-EQ7N65B-SEWANOW-S3HSYAA"; };
+    "r5950x" = { id = "O35IQ77-BXKVBA4-GPDCEFV-JJBPMS4-3ZAYRGY-A66YSIM-ANGA2TB-Y6IFIQ2"; };
   };
 
   # syncthing folders
@@ -26,10 +27,6 @@
     };
     "Obsidian" = {
       path = "/home/micah/Obsidian";
-      devices = [ "em780" ];
-    };
-    "Home" = {
-      path = "/home/micah/";
       devices = [ "em780" ];
     };
   };

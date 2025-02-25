@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./environment.nix
     ./hardware-configuration.nix
+    ./networking.nix
   ];
 }

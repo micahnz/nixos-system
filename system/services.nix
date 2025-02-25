@@ -69,5 +69,8 @@
     port = 8080;
     user = "micah";
     group = "users";
+    host = "0.0.0.0";
+    hashedPassword = "$argon2id$v=19$m=65536,t=3,p=4$RCfq5kCT5iMdYoCJoLuvnw$K/t/O6Pcp/peqIXN1MEqZbxvp1Ni+V4mrBf9hVx2xQM";
+    disableTelemetry = true;
   };
 }

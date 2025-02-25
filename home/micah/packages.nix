@@ -14,7 +14,7 @@ in
   home.packages = [
     # custom
     gcloud
-    
+
     # waydroid-script
     pkgs.argocd
     pkgs.awscli2
@@ -54,7 +54,7 @@ in
     pkgs.s3cmd
     pkgs.screen
     pkgs.signal-desktop
-    pkgs.slack
+    pkgs-24_05.slack
     pkgs.syncthingtray
     pkgs.talosctl
     pkgs.terraform

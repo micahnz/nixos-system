@@ -19,8 +19,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, hardware-configuration, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-24_05, hardware-configuration, ... } @ inputs:
     let
+      system = "x86_64-linux";
       profiles = {
         em780 = ./profiles/em780;
         qemu = ./profiles/qemu;
@@ -31,8 +32,16 @@
     {
       nixosModules = {
         nixosSystem = { profile ? "default" }: nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
+          inherit system;
+          specialArgs = {
+            inherit inputs;
+
+            # stable packages
+            nixpkgs-24_05 = import nixpkgs-24_05 {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
           modules = [
             ./userpkgs
             ./system

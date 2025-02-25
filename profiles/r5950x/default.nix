@@ -12,6 +12,7 @@
   fileSystems."/mnt/media" = {
     device = "/dev/disk/by-uuid/7870c256-066c-44f6-a9d1-ab79892bab4e";
     fsType = "btrfs";
+    options = [ "nofail" "noatime" ];
   };
 
   # nvidia for kde plasma
@@ -24,6 +25,6 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 }

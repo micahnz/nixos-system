@@ -5,6 +5,7 @@
     # package repos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-24_05.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-24_11.url = "github:NixOS/nixpkgs/nixos-24.11";
 
     # home-manager
     home-manager = {
@@ -19,7 +20,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-24_05, hardware-configuration, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-24_05, nixpkgs-24_11, hardware-configuration, ... } @ inputs:
     let
       system = "x86_64-linux";
       profiles = {
@@ -38,6 +39,10 @@
 
             # stable packages
             nixpkgs-24_05 = import nixpkgs-24_05 {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            nixpkgs-24_11 = import nixpkgs-24_11 {
               inherit system;
               config.allowUnfree = true;
             };

@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-24_05, ... }:
+{ config, pkgs, pkgs-24_05, pkgs-24_11, ... }:
 let
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
@@ -19,11 +19,12 @@ in
     pkgs.argocd
     pkgs.awscli2
     pkgs-24_05.azure-cli
-    pkgs-24_05.biome
+    pkgs-24_11.biome
     pkgs.buildah
     pkgs.bun
     pkgs.cpu-x
     pkgs.code-server
+    pkgs.code-cursor
     pkgs.google-chrome
     pkgs.dbeaver-bin
     pkgs.delve

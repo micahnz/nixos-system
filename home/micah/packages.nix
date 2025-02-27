@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-24_05, pkgs-24_11, ... }:
+{ config, pkgs, pkgs-24_05, pkgs-24_11, flakepkgs, ... }:
 let
   # google cloud with auth plugin
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [
@@ -15,7 +15,11 @@ in
     # custom
     gcloud
 
+    # claude-desktop
+    flakepkgs.claude-desktop
+
     # waydroid-script
+    pkgs.p7zip
     pkgs.argocd
     pkgs.awscli2
     pkgs-24_05.azure-cli
@@ -61,7 +65,8 @@ in
     pkgs.terraform
     pkgs.topiary
     pkgs.ungoogled-chromium
-    pkgs.vscode
+    # pkgs.vscode
+    pkgs.vscode-fhs
     pkgs.wl-clipboard
     pkgs.zsh-powerlevel10k
   ];

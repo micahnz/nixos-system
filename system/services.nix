@@ -51,7 +51,7 @@
     pulse.enable = true;
   };
 
-    # pulse audio
+  # pulse audio
   services.pulseaudio.enable = false;
 
   # printing

@@ -13,6 +13,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # claude-desktop
+    claude-desktop = {
+      url = "github:micahnz/claude-desktop-linux-flake/29e8665";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # default system generated hardware config
     hardware-configuration = {
       url = "path:///etc/nixos/hardware-configuration.nix";
@@ -20,7 +26,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-24_05, nixpkgs-24_11, hardware-configuration, ... } @ inputs:
+  outputs = { self, nixpkgs, hardware-configuration, ... } @ inputs:
     let
       system = "x86_64-linux";
       profiles = {
@@ -37,21 +43,24 @@
           specialArgs = {
             inherit inputs;
 
-            # stable packages
-            nixpkgs-24_05 = import nixpkgs-24_05 {
+            # previous stable packages
+            nixpkgs-24_05 = import inputs.nixpkgs-24_05 {
               inherit system;
               config.allowUnfree = true;
             };
-            nixpkgs-24_11 = import nixpkgs-24_11 {
+
+            # latest stable packages
+            nixpkgs-24_11 = import inputs.nixpkgs-24_11 {
               inherit system;
               config.allowUnfree = true;
             };
           };
           modules = [
-            ./userpkgs
+            profiles.${profile}
+            ./pkgs/user
+            ./pkgs/flakes
             ./system
             ./system/home-manager
-            profiles.${profile}
           ];
         };
       };

@@ -11,6 +11,7 @@
     pkgs.git
     pkgs.wget
     pkgs.vim
+    pkgs.alsa-lib
   ];
 
   programs.zsh.enable = true;

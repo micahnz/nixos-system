@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   imports = [
+    ./activation.nix
     ./aliases.nix
     ./packages.nix
     ./services.nix

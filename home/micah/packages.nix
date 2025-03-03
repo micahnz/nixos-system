@@ -19,27 +19,27 @@ in
     flakepkgs.claude-desktop
 
     # waydroid-script
-    pkgs.p7zip
+    pkgs-24_11.azure-cli
+    pkgs-24_11.slack
+    pkgs-24_11.biome
     pkgs.argocd
     pkgs.awscli2
-    pkgs-24_05.azure-cli
-    pkgs-24_11.biome
     pkgs.buildah
     pkgs.bun
-    pkgs.cpu-x
-    pkgs.code-server
     pkgs.code-cursor
-    pkgs.google-chrome
+    pkgs.code-server
+    pkgs.cpu-x
     pkgs.dbeaver-bin
     pkgs.delve
     pkgs.discord
     pkgs.doctl
     pkgs.eksctl
-    pkgs.firefox
     pkgs.fzf
     pkgs.gh
     pkgs.go
     pkgs.go-jsonnet
+    pkgs.google-chrome
+    pkgs.gopls
     pkgs.jan
     pkgs.jq
     pkgs.k3d
@@ -48,6 +48,7 @@ in
     pkgs.kubectx
     pkgs.kubernetes-helm
     pkgs.libreoffice
+    pkgs.librewolf
     pkgs.nickel
     pkgs.nixd
     pkgs.nixpkgs-fmt
@@ -55,17 +56,16 @@ in
     pkgs.nodejs_20
     pkgs.obsidian
     pkgs.openssl
+    pkgs.p7zip
     pkgs.prismlauncher
     pkgs.s3cmd
     pkgs.screen
     pkgs.signal-desktop
-    pkgs-24_05.slack
     pkgs.syncthingtray
     pkgs.talosctl
     pkgs.terraform
     pkgs.topiary
     pkgs.ungoogled-chromium
-    # pkgs.vscode
     pkgs.vscode-fhs
     pkgs.wl-clipboard
     pkgs.zsh-powerlevel10k

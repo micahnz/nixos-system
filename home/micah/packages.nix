@@ -16,7 +16,7 @@ in
     gcloud
 
     # claude-desktop
-    flakepkgs.claude-desktop
+    # flakepkgs.claude-desktop
 
     # waydroid-script
     pkgs-24_11.azure-cli

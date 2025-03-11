@@ -37,9 +37,5 @@
       path = "/home/micah/Obsidian";
       devices = [ "em780" "r5950x" ];
     };
-    "Librewolf" = {
-      path = "/home/micah/.librewolf";
-      devices = [ "em780" "r5950x" ];
-    };
   };
 }

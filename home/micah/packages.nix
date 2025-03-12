@@ -22,6 +22,7 @@ in
     pkgs-24_11.azure-cli
     pkgs-24_11.slack
     pkgs-24_11.biome
+    pkgs-24_11.terraform
     pkgs.argocd
     pkgs.awscli2
     pkgs.buildah
@@ -46,6 +47,7 @@ in
     pkgs.k9s
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.kops_1_30
     pkgs.kubernetes-helm
     pkgs.libreoffice
     pkgs.librewolf
@@ -63,7 +65,7 @@ in
     pkgs.signal-desktop
     pkgs.syncthingtray
     pkgs.talosctl
-    pkgs.terraform
+    pkgs-24_11.terraform
     pkgs.topiary
     pkgs.ungoogled-chromium
     pkgs.vscode-fhs

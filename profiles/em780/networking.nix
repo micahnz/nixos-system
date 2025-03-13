@@ -2,6 +2,10 @@
 
 {
   networking.hosts = {
+    "3.148.114.72" = [
+      "api.tradeify.dev.k8s.local"
+      "api.internal.tradeify.dev.k8s.local"
+    ];
     "172.18.0.2" = [
       "frontend.thegotham.tpv.k8s"
       "storybook.thegotham.tpv.k8s"

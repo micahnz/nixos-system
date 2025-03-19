@@ -27,6 +27,7 @@ in
     pkgs.awscli2
     pkgs.buildah
     pkgs.bun
+    pkgs.bws
     pkgs.code-cursor
     pkgs.code-server
     pkgs.cpu-x
@@ -35,6 +36,7 @@ in
     pkgs.discord
     pkgs.doctl
     pkgs.eksctl
+    pkgs.hcloud
     pkgs.fzf
     pkgs.gh
     pkgs.go

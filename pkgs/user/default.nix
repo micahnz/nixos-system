@@ -7,6 +7,8 @@
   };
 
   config.userpkgs = {
+    linkerd = pkgs.callPackage ./linkerd { };
+    linkerd_edge = pkgs.callPackage ./linkerd/edge.nix { };
     zshmarks = pkgs.callPackage ./zshmarks { };
   };
 }

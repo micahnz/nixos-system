@@ -5,6 +5,7 @@
     ./environment.nix
     ./hardware-configuration.nix
     ./networking.nix
+    ./virtualisation.nix
   ];
 
   # bootloader

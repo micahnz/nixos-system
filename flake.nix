@@ -4,12 +4,11 @@
   inputs = {
     # package repos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-24_05.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-24_11.url = "github:NixOS/nixpkgs/nixos-24.11";
 
     # home-manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,12 +41,6 @@
           inherit system;
           specialArgs = {
             inherit inputs;
-
-            # previous stable packages
-            nixpkgs-24_05 = import inputs.nixpkgs-24_05 {
-              inherit system;
-              config.allowUnfree = true;
-            };
 
             # latest stable packages
             nixpkgs-24_11 = import inputs.nixpkgs-24_11 {

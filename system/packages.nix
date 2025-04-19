@@ -7,11 +7,14 @@
   ];
 
   environment.systemPackages = [
-    pkgs.curl
-    pkgs.git
-    pkgs.wget
-    pkgs.vim
     pkgs.alsa-lib
+    pkgs.curl
+    pkgs.devenv
+    pkgs.git
+    pkgs.libinput
+    pkgs.libinput-gestures
+    pkgs.vim
+    pkgs.wget
   ];
 
   programs.zsh.enable = true;

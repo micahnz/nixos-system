@@ -13,8 +13,18 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # https://askubuntu.com/questions/1432154/unable-to-set-scrolling-speed-of-touchpad-ubuntu-22-10-wayland
+  services.udev.extraHwdb = ''
+    # Laptop model description (e.g. Apple Touch Pad)
+    evdev:input:b0003v05ACp0324*
+     EVDEV_ABS_00=::31
+     EVDEV_ABS_01=::28
+     EVDEV_ABS_35=::31
+     EVDEV_ABS_36=::28
+  '';
+
   # input remapper
-  services.input-remapper.enable = true;
+  # services.input-remapper.enable = true;
 
   # zero tier
   services.zerotierone = {

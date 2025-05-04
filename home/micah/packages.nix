@@ -32,6 +32,7 @@ in
     pkgs.biome
     pkgs.buildah
     pkgs.bun
+    pkgs.bitwarden-cli
     pkgs.bws
     pkgs.code-cursor
     pkgs.code-server
@@ -50,6 +51,7 @@ in
     pkgs.gopls
     pkgs.jan
     pkgs.jq
+    pkgs.jwt-cli
     pkgs.k3d
     pkgs.k9s
     pkgs.kubectl
@@ -61,6 +63,7 @@ in
     pkgs.nickel
     pkgs.nixd
     pkgs.nixpkgs-fmt
+    pkgs.kubeseal
     pkgs.nls
     pkgs.nodejs_20
     pkgs.obsidian
@@ -76,6 +79,7 @@ in
     pkgs.ungoogled-chromium
     pkgs.vscode-fhs
     pkgs.wl-clipboard
+    pkgs.yq
     pkgs.zsh-powerlevel10k
   ];
 }

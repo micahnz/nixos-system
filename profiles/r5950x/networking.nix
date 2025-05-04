@@ -23,5 +23,9 @@
       "storybook.tradeify.tpv.k8s"
       "rmq.tradeify.tpv.k8s"
     ];
+    "178.128.162.120" = [
+      "pulsehub.redhousei.com"
+      "audithub.redhousei.com"
+    ];
   };
 }

@@ -20,6 +20,9 @@
   # nvidia for kde plasma
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  # water cooling
+  programs.coolercontrol.enable = true;
+
   # nvidia drivers
   hardware.nvidia = {
     modesetting.enable = true;

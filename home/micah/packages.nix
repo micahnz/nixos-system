@@ -30,9 +30,9 @@ in
     pkgs.argocd
     pkgs.awscli2
     pkgs.biome
+    pkgs.bitwarden-cli
     pkgs.buildah
     pkgs.bun
-    pkgs.bitwarden-cli
     pkgs.bws
     pkgs.code-cursor
     pkgs.code-server
@@ -42,34 +42,36 @@ in
     pkgs.discord
     pkgs.doctl
     pkgs.eksctl
-    pkgs.hcloud
     pkgs.fzf
     pkgs.gh
     pkgs.go
     pkgs.go-jsonnet
     pkgs.google-chrome
     pkgs.gopls
+    pkgs.hcloud
     pkgs.jan
     pkgs.jq
     pkgs.jwt-cli
     pkgs.k3d
     pkgs.k9s
+    pkgs.kops_1_30
     pkgs.kubectl
     pkgs.kubectx
-    pkgs.kops_1_30
     pkgs.kubernetes-helm
+    pkgs.kubeseal
     pkgs.libreoffice
     pkgs.librewolf
     pkgs.nickel
     pkgs.nixd
     pkgs.nixpkgs-fmt
-    pkgs.kubeseal
     pkgs.nls
     pkgs.nodejs_20
     pkgs.obsidian
     pkgs.openssl
     pkgs.p7zip
     pkgs.prismlauncher
+    pkgs.pulumi
+    pkgs.pulumiPackages.pulumi-language-go
     pkgs.s3cmd
     pkgs.screen
     pkgs.signal-desktop

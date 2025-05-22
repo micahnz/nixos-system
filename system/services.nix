@@ -24,7 +24,7 @@
   '';
 
   # input remapper
-  # services.input-remapper.enable = true;
+  services.input-remapper.enable = true;
 
   # zero tier
   services.zerotierone = {

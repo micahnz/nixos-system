@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
   locale = "en_US.UTF-8";
-  timeZone = "Europe/Sofia";
+  timeZone = "Asia/Bangkok";
 in
 {
   time.timeZone = timeZone;

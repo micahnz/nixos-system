@@ -25,6 +25,7 @@ in
     pkgs-24_11.azure-cli
     pkgs-24_11.slack
     pkgs-24_11.terraform
+    pkgs-24_11.prismlauncher
 
     # unstable
     pkgs.argocd
@@ -69,7 +70,6 @@ in
     pkgs.obsidian
     pkgs.openssl
     pkgs.p7zip
-    pkgs.prismlauncher
     pkgs.pulumi
     pkgs.pulumiPackages.pulumi-language-go
     pkgs.s3cmd

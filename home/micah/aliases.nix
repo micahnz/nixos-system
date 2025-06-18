@@ -21,6 +21,7 @@
 
     # switch nixos system
     "nixsw" = ''
+      nix flake update nixos-system --flake /home/micah && \
       sudo nixos-rebuild switch --flake /home/micah
     '';
 
@@ -28,7 +29,7 @@
     "nixupg" = ''
       nix flake update --flake /home/micah/.nixos && \
       nix flake update --flake /home/micah && \
-      sudo nixos-rebuild switch --upgrade  --flake /home/micah
+      sudo nixos-rebuild switch --upgrade --flake /home/micah
     '';
 
     # update nixos system

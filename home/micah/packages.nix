@@ -35,7 +35,6 @@ in
     pkgs.buildah
     pkgs.bun
     pkgs.bws
-    pkgs.code-cursor
     pkgs.code-server
     pkgs.cpu-x
     pkgs.dbeaver-bin
@@ -55,6 +54,8 @@ in
     pkgs.jwt-cli
     pkgs.k3d
     pkgs.k9s
+    pkgs.lsof
+    pkgs.yarn
     pkgs.kops_1_30
     pkgs.kubectl
     pkgs.kubectx

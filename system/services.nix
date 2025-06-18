@@ -34,6 +34,10 @@
     ];
   };
 
+  services.cloudflare-warp = {
+    enable = true;
+  };
+
   # keyboard layout for x11
   services.xserver.xkb = {
     layout = "us";

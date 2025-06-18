@@ -20,7 +20,9 @@
     "nixpkgs" = "code /home/micah/.nixos/home/micah/packages.nix";
 
     # switch nixos system
-    "nixsw" = "sudo nixos-rebuild switch --flake /home/micah";
+    "nixsw" = ''
+      sudo nixos-rebuild switch --flake /home/micah
+    '';
 
     # upgrade nixos system
     "nixupg" = ''
